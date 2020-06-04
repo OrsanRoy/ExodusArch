@@ -1,0 +1,55 @@
+@mixin flex($prop) {
+    display: flex;
+    justify-content: $prop;
+    align-items: center;
+}
+
+%block-size {
+    width: 75%;
+    margin: 0 auto;
+}
+
+%main-btn {
+    font-size: inherit;
+    font-weight: bold;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background-color: $lava-color;
+    color: white;
+
+    &:hover {
+        background-color: $lava-dark;
+    }
+}
+
+%secondary-btn {
+    background-color: rgb(241, 241, 241);
+    color: $lava-color;
+
+    &:hover {
+        background-color: $white-btn-hover;
+    }
+}
+
+// Orange line near headings
+%heading-line {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 100;
+}
+
+%heading-line-before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.3rem;
+    height: 4rem;
+    background-color: $lava-color;
+    top: 0;
+    left: -1rem;
+    z-index: -1;
+}

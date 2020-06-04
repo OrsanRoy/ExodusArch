@@ -1,0 +1,20 @@
+#contacts
+    .contacts-content
+        .info
+            h2 Контакты
+            p <span>Мы находимся по адресу:</span> <br>г. Москва, Зелёная ул., дом 24
+            p
+                a(href='#') +7 (912) 345 67 89
+            p
+                a(href='#') exodusarch@somemail.com
+        form 
+            h3 Остались вопросы? Зайдайте их нам.
+            label(for='name') Ваше имя
+            input(type='text', id='name', name='name' placeholder="Имя")
+            label(for='email') Ваш E-mail
+            input(type='text' id='email' name='email' placeholder='E-mail')
+            label(for='question') Текст вопроса:
+            textarea(name="quiestion" id="quiestion", cols="50", rows="5" placeholder='Коротко опишите свой вопрос')
+            input(type='button' value='Отправить' class='submit')
+    .map
+        script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac3c61a021893a8c0db765c04cc0caead03cf430e6fe15abd72562b757c127a13&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true")

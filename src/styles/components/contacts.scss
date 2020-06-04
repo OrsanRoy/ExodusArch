@@ -1,0 +1,101 @@
+#contacts {
+    width: 100%;
+    min-height: 90vh;
+    background-color: white;
+    color: $main-color;
+    font-size: 1.5rem;
+    @include flex(center);
+    flex-direction: column;
+
+    .map {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.contacts-content {
+    @extend %block-size;
+    @include flex(space-between);
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    height: 70%;
+    
+
+    .info {
+        width: 50%;
+
+        h2 {
+            @extend %heading-line;
+        
+            &:before {
+                @extend %heading-line-before;
+            }
+        }
+
+        p {
+            line-height: 2rem;
+
+            span {
+                font-weight: bold;
+            }
+
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration-color: $lava-color;
+                }
+            }
+        }
+
+        
+    }
+
+    form {
+        width: 45%;
+        background-color: $main-color;
+        color: white;
+        box-sizing: border-box;
+        padding: 2%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-radius: 1rem;
+
+        h3 {
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        input, label, textarea {
+            display: block;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        input, textarea {
+            border-radius: 0.5rem;
+            border: none;
+            box-sizing: inherit;
+            padding: 0.5rem;
+        }
+
+        label {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .submit {
+            margin-top: 1rem;
+            background-color: $lava-color;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $lava-dark;
+            }
+        }
+    }
+}
+

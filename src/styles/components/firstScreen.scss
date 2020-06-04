@@ -1,0 +1,40 @@
+.banner {
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('src/assets/banner.jpg'), linear-gradient($gray-alpha, $gray-alpha);
+    background-blend-mode: overlay;
+    background-size: cover;
+    @include flex(center);
+
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.content {
+    width: 60%;
+
+    h1 {
+        font-size: 6rem;
+
+        span {
+            color: $lava-color;
+        }
+    }
+
+    p {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+}
+
+.buttons {
+    button {
+        @extend %main-btn;
+    }
+
+    .secondary {
+        @extend %secondary-btn;
+    }
+}

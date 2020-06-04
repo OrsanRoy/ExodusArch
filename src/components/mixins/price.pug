@@ -1,0 +1,10 @@
+mixin price(price, time, text, list)
+    .price-card
+        p.price <span>Сумма:</span> #{price}
+        p.time <span>Срок:</span> #{time}
+        p.price-text= text
+        p.checklist Перечень проводимых работ:
+        ul.price-list
+            each item in list
+                li — #{item}
+        button Заказать проект

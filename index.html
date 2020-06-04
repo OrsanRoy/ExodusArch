@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}/* Regular */
+@font-face {
+  font-family: "Montserrat";
+  src: url(src/assets/fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Light */
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(src/assets/fonts/Montserrat-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: lighter;
+}
+/* Medium */
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(src/assets/fonts/Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: bolder;
+}
+/* Bold */
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(src/assets/fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+.contacts-content, #prices, #projects, #about {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.price_cards .price-card button, .project_cards .card button, .buttons button {
+  font-size: inherit;
+  font-weight: bold;
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: #ff4500;
+  color: white;
+}
+.price_cards .price-card button:hover, .project_cards .card button:hover, .buttons button:hover {
+  background-color: #ee470b;
+}
+
+.buttons .secondary {
+  background-color: #f1f1f1;
+  color: #ff4500;
+}
+.buttons .secondary:hover {
+  background-color: #e2e2e2;
+}
+
+.contacts-content .info h2, #prices h2, #projects h2, .about_content h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 100;
+}
+
+.contacts-content .info h2:before, #prices h2:before, #projects h2:before, .about_content h2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.3rem;
+  height: 4rem;
+  background-color: #ff4500;
+  top: 0;
+  left: -1rem;
+  z-index: -1;
+}
+
+.contacts-content, #prices, #projects, #about {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.price_cards .price-card button, .project_cards .card button, .buttons button {
+  font-size: inherit;
+  font-weight: bold;
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: #ff4500;
+  color: white;
+}
+.price_cards .price-card button:hover, .project_cards .card button:hover, .buttons button:hover {
+  background-color: #ee470b;
+}
+
+.buttons .secondary {
+  background-color: #f1f1f1;
+  color: #ff4500;
+}
+.buttons .secondary:hover {
+  background-color: #e2e2e2;
+}
+
+.contacts-content .info h2, #prices h2, #projects h2, .about_content h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 100;
+}
+
+.contacts-content .info h2:before, #prices h2:before, #projects h2:before, .about_content h2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.3rem;
+  height: 4rem;
+  background-color: #ff4500;
+  top: 0;
+  left: -1rem;
+  z-index: -1;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  height: 10vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+header nav a:hover {
+  border-bottom: 2px solid #ff4500;
+}
+header .socials {
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .socials a:hover {
+  color: #ff4500;
+}
+
+.banner {
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("src/assets/banner.jpg"), linear-gradient(rgba(56, 56, 56, 0.8), rgba(56, 56, 56, 0.8));
+  background-blend-mode: overlay;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.content {
+  width: 60%;
+}
+.content h1 {
+  font-size: 6rem;
+}
+.content h1 span {
+  color: #ff4500;
+}
+.content p {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+#about {
+  min-height: 80vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_centerer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+}
+
+.about_content {
+  width: 55%;
+}
+.about_content p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.images {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+.images img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+.images img:nth-child(3) {
+  margin-top: 1rem;
+}
+.images img:last-child {
+  margin-top: 1rem;
+}
+
+section {
+  background-color: white;
+  color: #172b32;
+}
+
+#projects {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.project_cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55%;
+}
+.project_cards .card {
+  background-color: white;
+  width: 23%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px 2px lightgray;
+}
+.project_cards .card figure {
+  width: 100%;
+  max-height: 42%;
+}
+.project_cards .card figure img {
+  width: 100%;
+  height: auto;
+}
+.project_cards .card .inner_card {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5%;
+}
+.project_cards .card .inner_card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.project_cards .card .inner_card p {
+  font-size: 1.2rem;
+  margin: 7% 0;
+}
+#prices {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.price_cards {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #172b32;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+.price_cards .price-card {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1.5%;
+  width: 32%;
+  box-shadow: 0 0 15px 1px rgba(97, 97, 97, 0.739);
+  background-image: url(src/assets/price-bg.jpg), linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.price_cards .price-card span {
+  font-weight: bold;
+}
+.price_cards .price-card .checklist {
+  font-weight: bold;
+  margin-top: 3%;
+}
+.price_cards .price-card .price-list {
+  margin-bottom: 3%;
+  list-style: none;
+}
+.price_cards .price-card button {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+#contacts {
+  width: 100%;
+  min-height: 90vh;
+  background-color: white;
+  color: #172b32;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contacts .map {
+  width: 100%;
+  height: 40%;
+}
+
+.contacts-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 70%;
+}
+.contacts-content .info {
+  width: 50%;
+}
+.contacts-content .info p {
+  line-height: 2rem;
+}
+.contacts-content .info p span {
+  font-weight: bold;
+}
+.contacts-content .info p a {
+  text-decoration: underline;
+}
+.contacts-content .info p a:hover {
+  text-decoration-color: #ff4500;
+}
+.contacts-content form {
+  width: 45%;
+  background-color: #172b32;
+  color: white;
+  box-sizing: border-box;
+  padding: 2%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 1rem;
+}
+.contacts-content form h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.contacts-content form input, .contacts-content form label, .contacts-content form textarea {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+}
+.contacts-content form input, .contacts-content form textarea {
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: inherit;
+  padding: 0.5rem;
+}
+.contacts-content form label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.contacts-content form .submit {
+  margin-top: 1rem;
+  background-color: #ff4500;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contacts-content form .submit:hover {
+  background-color: #ee470b;
+}
+
+footer {
+  background-color: #111;
+  height: 8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .copyright {
+  text-align: left;
+}
+footer .copyright span {
+  color: #ff4500;
+}
+footer div {
+  width: 32%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .footer-socials a:first-child {
+  margin-right: 0.5rem;
+}
+footer .footer-socials a:hover {
+  color: #ff4500;
+}
+
+html {
+  background-color: #172b32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .contacts-content,
+.buttons,
+#prices,
+#projects,
+#about {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 14px;
+  }
+
+  #about {
+    padding: 7% 0;
+  }
+  #about .about_centerer {
+    flex-direction: column;
+  }
+  #about .about_centerer .about_content,
+#about .about_centerer .images {
+    width: 100%;
+  }
+  #about .about_centerer .images {
+    margin-top: 5%;
+  }
+
+  #projects {
+    padding: 7% 0;
+  }
+  #projects .project_cards {
+    flex-wrap: wrap;
+  }
+  #projects .project_cards .card {
+    width: 45%;
+  }
+  #projects .project_cards .card:nth-child(3), #projects .project_cards .card:last-child {
+    margin-top: 5%;
+  }
+
+  #contacts {
+    min-height: 80vh;
+  }
+}
+@media screen and (max-width: 930px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header .socials {
+    display: none;
+  }
+  header nav {
+    width: 60%;
+  }
+
+  .contacts-content .info,
+.contacts-content form {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner .content {
+    width: 90%;
+    text-align: center;
+  }
+  .banner .content h1 {
+    font-size: 4rem;
+  }
+  .banner .buttons {
+    width: 100%;
+  }
+
+  #about h2, #projects h2, #prices h2, #contacts h2 {
+    font-size: 3rem;
+  }
+  #about h2:before, #projects h2:before, #prices h2:before, #contacts h2:before {
+    height: 3rem;
+  }
+
+  #about .images {
+    width: 90%;
+  }
+  #about .images img {
+    width: 100%;
+    height: auto;
+  }
+  #about .images img:first-child {
+    margin-bottom: 5%;
+  }
+  #about .images img:nth-child(3), #about .images img:last-child {
+    display: none;
+  }
+
+  #projects .project_cards {
+    flex-direction: column;
+  }
+  #projects .project_cards .card {
+    width: 100%;
+  }
+  #projects .project_cards .card:nth-child(2) {
+    margin-top: 5%;
+  }
+
+  #prices {
+    padding: 7% 0;
+  }
+  #prices .price_cards {
+    flex-wrap: wrap;
+  }
+  #prices .price_cards .price-card {
+    width: 100%;
+  }
+  #prices .price_cards .price-card:not(:last-child) {
+    margin-bottom: 5%;
+  }
+
+  #contacts .contacts-content {
+    flex-direction: column;
+  }
+  #contacts .contacts-content .info,
+#contacts .contacts-content form {
+    width: 100%;
+  }
+  #contacts .contacts-content .info {
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 580px) {
+  #prices .price-card {
+    padding: 5%;
+  }
+
+  header .logo {
+    display: none;
+  }
+  header nav {
+    width: 100%;
+  }
+
+  .mobile-logo {
+    display: block;
+    margin-bottom: 10%;
+  }
+  .mobile-logo img {
+    width: 50%;
+    height: auto;
+  }
+
+  #about,
+#projects,
+#prices {
+    padding: 10% 0;
+  }
+
+  footer .copyright {
+    width: 50%;
+  }
+  footer .logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner .content h1 {
+    font-size: 3rem;
+  }
+  .banner .content p {
+    font-size: 1.5rem;
+  }
+
+  #about h2, #projects h2, #prices h2, #contacts h2 {
+    font-size: 2rem;
+  }
+  #about h2:before, #projects h2:before, #prices h2:before, #contacts h2:before {
+    height: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+    </style>
+    <script src="https://kit.fontawesome.com/b47163faa3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header><a class="logo" href="file:///C:/Users/эльдорадо/Desktop/Projects/MyProjects/Practice/scss+pug/index.html"><img src="src/assets/logo@1.png" alt="Exodus Architect logo" srcset=""/></a>
+      <nav><a href="#">О компании</a><a href="#">Проекты</a><a href="#">Цены</a><a href="#">Контакты</a>
+      </nav>
+      <div class="socials">
+        <div class="inst"><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a></div>
+        <div class="fb"><a href="#"> <i class="fab fa-facebook-square fa-2x"></i></a></div>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content"><a class="mobile-logo" href="file:///C:/Users/эльдорадо/Desktop/Projects/MyProjects/Practice/scss+pug/index.html"><img src="src/assets/logo@3x.png" alt="Exodus Architect logo" srcset=""/></a>
+        <h1>Exodus <span>Arch</span>itecture™</h1>
+        <p>Дизайнерские решения для создания дома Вашей мечты</p>
+        <div class="buttons">
+          <button>Подробнее</button>
+          <button class="secondary">Заказать проект</button>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="about_centerer">
+        <div class="about_content">
+          <h2>О компании</h2>
+          <p>А также реплицированные с зарубежных источников, современные исследования объективно рассмотрены соответствующими инстанциями. А также многие известные личности представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований! Как принято считать, действия представителей оппозиции неоднозначны и будут подвергнуты целой серии независимых исследований. С другой стороны, курс на социально-ориентированный национальный проект не оставляет шанса для новых принципов формирования материально-технической и кадровой базы.</p>
+        </div>
+        <figure class="images"><img src="src/assets/t1.jpg" alt="" srcset="" width="48%" height="48%"/><img src="src/assets/t2.jpg" alt="" srcset="" width="48%" height="48%"/><img src="src/assets/t3.jpg" alt="" srcset="" width="48%" height="48%"/><img src="src/assets/t4.jpg" alt="" srcset="" width="48%" height="48%"/>
+        </figure>
+      </div>
+    </div>
+    <section>
+      <div id="projects">
+        <h2>Наши проекты</h2>
+        <div class="project_cards">
+              <div class="card">
+                <figure><img src="src/assets/house.jpg" alt="" srcset=""/></figure>
+                <div class="inner_card">
+                  <div>
+                    <h3>Sunrise Shores</h3>
+                    <p>Небольшой уютный домик на побережье — самый необычный из наших проектов. Бассейн, ухоженный участок, гараж на четыре места и личный причал для Вашей лодки.</p>
+                  </div>
+                  <div>
+                    <button>Подробнее</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <figure><img src="src/assets/house.jpg" alt="" srcset=""/></figure>
+                <div class="inner_card">
+                  <div>
+                    <h3>Sunrise Shores</h3>
+                    <p>Небольшой уютный домик на побережье — самый необычный из наших проектов. Бассейн, ухоженный участок, гараж на четыре места и личный причал для Вашей лодки.</p>
+                  </div>
+                  <div>
+                    <button>Подробнее</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <figure><img src="src/assets/house.jpg" alt="" srcset=""/></figure>
+                <div class="inner_card">
+                  <div>
+                    <h3>Sunrise Shores</h3>
+                    <p>Небольшой уютный домик на побережье — самый необычный из наших проектов. Бассейн, ухоженный участок, гараж на четыре места и личный причал для Вашей лодки.</p>
+                  </div>
+                  <div>
+                    <button>Подробнее</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <figure><img src="src/assets/house.jpg" alt="" srcset=""/></figure>
+                <div class="inner_card">
+                  <div>
+                    <h3>Sunrise Shores</h3>
+                    <p>Небольшой уютный домик на побережье — самый необычный из наших проектов. Бассейн, ухоженный участок, гараж на четыре места и личный причал для Вашей лодки.</p>
+                  </div>
+                  <div>
+                    <button>Подробнее</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <div id="prices">
+      <h2>Стоимость</h2>
+      <div class="price_cards">
+            <div class="price-card">
+              <p class="price"><span>Сумма:</span> 100 000$</p>
+              <p class="time"><span>Срок:</span> 4 мес.</p>
+              <p class="price-text">Быстро и недорого - идеальный вариант для дачи.</p>
+              <p class="checklist">Перечень проводимых работ:</p>
+              <ul class="price-list">
+                <li>— Замеры</li>
+                <li>— Проектирование</li>
+                <li>— Согласование стоимости</li>
+                <li>— Конструкторские работы</li>
+              </ul>
+              <button>Заказать проект</button>
+            </div>
+            <div class="price-card">
+              <p class="price"><span>Сумма:</span> 100 000$</p>
+              <p class="time"><span>Срок:</span> 4 мес.</p>
+              <p class="price-text">Быстро и недорого - идеальный вариант для дачи.</p>
+              <p class="checklist">Перечень проводимых работ:</p>
+              <ul class="price-list">
+                <li>— Замеры</li>
+                <li>— Проектирование</li>
+                <li>— Согласование стоимости</li>
+                <li>— Конструкторские работы</li>
+              </ul>
+              <button>Заказать проект</button>
+            </div>
+            <div class="price-card">
+              <p class="price"><span>Сумма:</span> 100 000$</p>
+              <p class="time"><span>Срок:</span> 4 мес.</p>
+              <p class="price-text">Быстро и недорого - идеальный вариант для дачи.</p>
+              <p class="checklist">Перечень проводимых работ:</p>
+              <ul class="price-list">
+                <li>— Замеры</li>
+                <li>— Проектирование</li>
+                <li>— Согласование стоимости</li>
+                <li>— Конструкторские работы</li>
+              </ul>
+              <button>Заказать проект</button>
+            </div>
+      </div>
+    </div>
+    <div id="contacts">
+      <div class="contacts-content">
+        <div class="info">
+          <h2>Контакты</h2>
+          <p><span>Мы находимся по адресу:</span> <br>г. Москва, Зелёная ул., дом 24</p>
+          <p><a href="#">+7 (912) 345 67 89</a></p>
+          <p><a href="#">exodusarch@somemail.com</a></p>
+        </div>
+        <form> 
+          <h3>Остались вопросы? Зайдайте их нам.</h3>
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" placeholder="Имя"/>
+          <label for="email">Ваш E-mail</label>
+          <input type="text" id="email" name="email" placeholder="E-mail"/>
+          <label for="question">Текст вопроса:</label>
+          <textarea name="quiestion" id="quiestion" cols="50" rows="5" placeholder="Коротко опишите свой вопрос"></textarea>
+          <input class="submit" type="button" value="Отправить"/>
+        </form>
+      </div>
+      <div class="map">
+        <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac3c61a021893a8c0db765c04cc0caead03cf430e6fe15abd72562b757c127a13&amp;amp;width=100%25&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        <p>Copyright © Exodus <span>Arch</span>itect. All rights reserved</p>
+      </div>
+      <div class="logo"><a href="file:///C:/Users/эльдорадо/Desktop/Projects/MyProjects/Practice/scss+pug/index.html"><img src="src/assets/logo@1.png" alt="" srcset=""/></a></div>
+      <div class="footer-socials"><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a><a href="#"> <i class="fab fa-facebook-square fa-2x"></i></a></div>
+    </footer>
+  </body>
+</html>

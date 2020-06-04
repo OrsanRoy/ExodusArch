@@ -1,0 +1,49 @@
+#about {
+    @extend %block-size;
+    min-height: 80vh;
+    box-sizing: border-box;
+    @include flex(center);
+}
+
+.about_centerer {
+    @include flex(space-between);
+    align-items: flex-start;
+}
+
+.about_content {
+    width: 55%;
+    
+    h2 {
+        @extend %heading-line;
+
+        &:before {
+            @extend %heading-line-before;
+        }
+    }
+    
+    p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+}
+
+.images {
+    width: 35%;
+    @include flex(space-between);
+    align-items: space-between;
+    flex-wrap: wrap;
+
+    img {
+        border-radius: 1rem;
+        max-width: 100%;
+        height: auto;
+        
+        &:nth-child(3) {
+            margin-top: 1rem;
+        }
+
+        &:last-child {
+            margin-top: 1rem;
+        }
+    }
+}

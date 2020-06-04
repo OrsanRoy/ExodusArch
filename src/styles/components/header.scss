@@ -1,0 +1,35 @@
+@import '_mixins.scss';
+
+header {
+    width: 90%;
+    margin: 0 auto;
+    height: 10vh;
+    // background-color: $main-color-rgba;
+    // position: fixed;
+    color: white;
+    @include flex(space-between);
+
+    nav {
+        width: 40%;
+        @include flex(space-between);
+        font-weight: bold;
+        font-size: 1.2rem;
+
+        a:hover {
+            border-bottom: 2px solid $lava-color;
+        }
+    }
+
+    .socials {
+        width: 4rem;
+        @include flex(space-between);
+
+        a:hover {
+            color: $lava-color;
+        }
+    }
+}
+
+
+
+
