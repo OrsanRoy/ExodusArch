@@ -390,6 +390,7 @@ section {
 .contacts-content form .submit {
   margin-top: 1rem;
   background-color: #ff4500;
+  border: none;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -491,12 +492,12 @@ a {
     min-height: 80vh;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 980px) {
   html {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   header .socials {
     display: none;
   }
@@ -509,7 +510,7 @@ a {
     width: 50%;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .banner .content {
     width: 90%;
     text-align: center;
