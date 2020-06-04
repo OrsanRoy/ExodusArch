@@ -351,7 +351,7 @@ section {
   text-align: center;
   font-size: 1.2rem;
 }
-.contacts-content form input, .contacts-content form label, .contacts-content form textarea {
+.contacts-content form input, .contacts-content form label, .contacts-content form textarea, .contacts-content form .submit {
   display: block;
   width: 100%;
   font-family: inherit;
@@ -373,6 +373,8 @@ section {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 0.5rem;
+  height: 2rem;
 }
 .contacts-content form .submit:hover {
   background-color: #ee470b;
