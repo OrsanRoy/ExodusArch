@@ -1,30 +1,9 @@
 /* Regular */
 @font-face {
   font-family: "Montserrat";
-  src: url(src/assets/fonts/Montserrat-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/Montserrat-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
-}
-/* Light */
-@font-face {
-  font-family: "Montserrat Light";
-  src: url(src/assets/fonts/Montserrat-Light.ttf) format("truetype");
-  font-weight: 300;
-  font-style: lighter;
-}
-/* Medium */
-@font-face {
-  font-family: "Montserrat Medium";
-  src: url(src/assets/fonts/Montserrat-Medium.ttf) format("truetype");
-  font-weight: 500;
-  font-style: bolder;
-}
-/* Bold */
-@font-face {
-  font-family: "Montserrat Bold";
-  src: url(src/assets/fonts/Montserrat-Regular.ttf) format("truetype");
-  font-weight: 700;
-  font-style: bold;
 }
 .contacts-content, #prices, #projects, #about {
   width: 75%;
@@ -153,7 +132,7 @@ header .socials a:hover {
 .banner {
   width: 100%;
   min-height: 90vh;
-  background-image: url("src/assets/banner.jpg"), linear-gradient(rgba(56, 56, 56, 0.8), rgba(56, 56, 56, 0.8));
+  background-image: url("../assets/banner.jpg"), linear-gradient(rgba(56, 56, 56, 0.8), rgba(56, 56, 56, 0.8));
   background-blend-mode: overlay;
   background-size: cover;
   display: flex;
@@ -298,7 +277,7 @@ section {
   padding: 1.5%;
   width: 32%;
   box-shadow: 0 0 15px 1px rgba(97, 97, 97, 0.739);
-  background-image: url(src/assets/price-bg.jpg), linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background-image: url(../assets/price-bg.jpg), linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   background-size: cover;
   background-blend-mode: overlay;
 }
